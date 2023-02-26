@@ -5,8 +5,8 @@ import {
   Page,
   Paragraph,
   ButtonVariantType,
+  ContextProvider as CravenUIContext,
 } from "./components";
-import "./index.css";
 
-export { Button, Heading, HoverCard, Page, Paragraph };
+export { Button, Heading, HoverCard, Page, Paragraph, CravenUIContext };
 export type { ButtonVariantType };
