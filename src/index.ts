@@ -1,3 +1,12 @@
-import { Button } from "./components";
+import {
+  Button,
+  Heading,
+  HoverCard,
+  Page,
+  Paragraph,
+  ButtonVariantType,
+} from "./components";
+import "./index.css";
 
-export { Button };
+export { Button, Heading, HoverCard, Page, Paragraph };
+export type { ButtonVariantType };

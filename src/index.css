@@ -1,0 +1,6 @@
+@import url("https://use.typekit.net/iti5dbm.css");
+@import url("font/stylesheet.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
