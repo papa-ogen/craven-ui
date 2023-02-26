@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Craven UI</h1>
-      <Button />
+      <Button text="Hello World" />
     </div>
   );
 }
