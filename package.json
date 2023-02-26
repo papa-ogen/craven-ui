@@ -1,19 +1,19 @@
 {
   "name": "@papa-ogen/craven-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
+  "types": "./dist/components/index.d.ts",
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
+  "main": "./dist/craven-ui.umd.cjs",
+  "module": "./dist/craven-ui.js",
   "exports": {
     ".": {
       "import": "./dist/craven-ui.js",
       "require": "./dist/craven-ui.umd.cjs"
     }
   },
-  "types": "",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
