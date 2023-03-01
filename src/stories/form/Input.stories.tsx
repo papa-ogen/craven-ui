@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { useState } from "react";
 
 import { Input } from "../..";
 
@@ -17,8 +18,17 @@ export default {
 } as ComponentMeta<typeof Input>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Input> = (args) => {
-  return <Input {...args} />;
+const Template: ComponentStory<typeof Input> = ({ value, ...args }) => {
+  const [inputValue, setInputValue] = useState(value);
+  return (
+    <Input
+      {...{
+        ...args,
+        value: inputValue,
+        onChange: (e) => setInputValue(e.target.value),
+      }}
+    />
+  );
 };
 
 const inputArgs = {
@@ -38,8 +48,20 @@ WithError.args = {
   ...inputArgs,
   error: "Error: Wrong name",
 };
+
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...inputArgs,
   disabled: true,
+};
+
+export const WithValue = Template.bind({});
+WithValue.args = {
+  ...inputArgs,
+  value: "Dave Mustaine",
+};
+export const WithDefaultValue = Template.bind({});
+WithDefaultValue.args = {
+  ...inputArgs,
+  defaultValue: "Tony Iommi",
 };

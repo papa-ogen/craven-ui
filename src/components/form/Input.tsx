@@ -3,10 +3,14 @@ interface InputProps {
   id: string;
   label?: string;
   placeholder?: string;
-  type?: "text" | "password";
+  type?: "text" | "password" | "number";
   error?: string;
   required?: boolean;
   disabled?: boolean;
+  defaultValue?: string | number;
+  value?: string | number;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 const Input = ({
   id,
@@ -16,6 +20,10 @@ const Input = ({
   error,
   required,
   disabled,
+  defaultValue,
+  value,
+  onChange,
+  onBlur,
 }: InputProps) => {
   return (
     <div className="mb-4">
@@ -34,6 +42,10 @@ const Input = ({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
+        defaultValue={defaultValue}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
       />
       {error && <p className="text-red-10 text-xs italic mt-1">{error}</p>}
     </div>
