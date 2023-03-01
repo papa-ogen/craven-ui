@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Page, Paragraph } from "../components";
+import { Button, Input, Page, Paragraph } from "../components";
 
 export default {
-  title: "EasyTime/Page",
+  title: "UI/Page",
   component: Page,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
@@ -14,16 +14,39 @@ const Template: ComponentStory<typeof Page> = ({ children, ...args }) => (
   <Page {...args}>{children}</Page>
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  title: "Page Title",
+export const LoginPage = Template.bind({});
+LoginPage.args = {
+  title: "Login Page",
   children: (
-    <Paragraph>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere,
-      aspernatur? Nulla nam delectus cupiditate assumenda illum earum odit hic
-      repellat ex, excepturi aspernatur temporibus mollitia quo, aperiam eius
-      molestiae vero.
-    </Paragraph>
+    <>
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere,
+        aspernatur?
+      </Paragraph>
+      <Paragraph>
+        Nulla nam delectus cupiditate assumenda illum earum odit hic repellat
+        ex, excepturi aspernatur temporibus mollitia quo, aperiam eius molestiae
+        vero.
+      </Paragraph>
+      <div className="flex max-w-sm">
+        <form className="w-full">
+          <Input
+            id="email"
+            label="E-mail"
+            placeholder="Sign in with your e-mail address"
+            required
+          />
+          <Input
+            id="password"
+            label="Password"
+            placeholder="Write your Password"
+            type="password"
+            required
+          />
+          <Button>Log in</Button>
+        </form>
+      </div>
+    </>
   ),
 };
 export const Allocation = Template.bind({});

@@ -12,7 +12,7 @@ const Page = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-4xl">
       <Title>{title}</Title>
       {children}
     </div>

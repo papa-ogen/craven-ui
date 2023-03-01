@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Button, ButtonVariantType } from "../components";
+import { Button, ButtonVariantType } from "../../components";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "UI/Button",
+  title: "UI/Form/Button",
   component: Button,
   decorators: [
     (Story) => (
@@ -19,11 +19,11 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = ({
   children,
-  variant,
+  ...args
 }: {
   children: string;
   variant?: ButtonVariantType;
-}) => <Button variant={variant}>{children}</Button>;
+}) => <Button {...args}>{children}</Button>;
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -47,4 +47,9 @@ export const Info = Template.bind({});
 Info.args = {
   children: "Button",
   variant: "info",
+};
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: "Button",
+  disabled: true,
 };

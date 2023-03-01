@@ -1,31 +1,42 @@
 export type ButtonVariantType = "error" | "success" | "warning" | "info";
 
+export interface ButtonProps2 extends React.HTMLProps<HTMLButtonElement> {}
+
+interface ButtonProps {
+  children: string;
+  variant?: ButtonVariantType;
+  name?: string | undefined;
+  type?: "submit" | "reset" | "button" | undefined;
+  disabled?: boolean;
+}
+
 const getVariantClasses = (variant: ButtonVariantType) => {
   switch (variant) {
     case "error":
-      return "bg-red-10";
+      return "border-red-10 text-red-10";
     case "warning":
-      return "bg-yellow-10 text-slate-1";
+      return "border-yellow-10 text-yellow-10";
     case "info":
-      return "bg-blue-10";
+      return "border-blue-10 text-blue-10";
     case "success":
     default:
-      return "bg-grass-10";
+      return "border-grass-10 text-grass-10";
   }
 };
 
 const Button = ({
   children,
   variant = "success",
-}: {
-  children: string;
-  variant?: ButtonVariantType;
-}) => {
+  type = "button",
+  disabled,
+}: ButtonProps) => {
   return (
     <button
-      className={`rounded-sm max-w-xs w-36 hover:opacity-75 ${getVariantClasses(
-        variant
-      )}`}
+      type={type}
+      className={`border rounded-sm max-w-xs w-36 opacity-75 hover:opacity-100 py-1 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:hover:opacity-80 ${
+        !disabled && getVariantClasses(variant)
+      }`}
+      disabled={disabled}
     >
       {children}
     </button>
