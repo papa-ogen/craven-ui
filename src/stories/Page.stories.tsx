@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button, Input, Page, Paragraph } from "..";
+import { Button, ContextProvider, Input, Page, Paragraph } from "..";
 import { Default } from "./form/LoginForm.stories";
 
 export default {
