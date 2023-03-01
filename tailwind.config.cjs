@@ -5,8 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "logo-dark":
-          "url('../public/assets/Cstudio_logo_BW_positive_CMYK_web-01.svg')",
+        logo: "url('/assets/Cstudio_logo_BW_positive_CMYK_web-01.svg')",
       },
     },
     colors: {

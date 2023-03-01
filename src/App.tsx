@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, ContextProvider, Page, Paragraph } from "./index";
 
 function App() {
