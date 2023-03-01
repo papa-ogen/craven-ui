@@ -1,6 +1,6 @@
 {
   "name": "@papa-ogen/craven-ui",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "type": "module",
   "types": "./dist/index.d.ts",
   "files": [
@@ -25,7 +25,8 @@
     "@radix-ui/react-hover-card": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-plugin-dts": "^2.0.2"
+    "vite-plugin-dts": "^2.0.2",
+    "vite-plugin-fonts": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

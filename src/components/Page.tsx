@@ -1,7 +1,7 @@
 import React from "react";
 
 const Title = ({ children }: { children: string }) => {
-  return <h2 className="text-cyan-10 text-xl mb-4">{children}</h2>;
+  return <h2 className="text-cyan-10 text-xl mb-4 tk-uniwars">{children}</h2>;
 };
 
 const Page = ({
