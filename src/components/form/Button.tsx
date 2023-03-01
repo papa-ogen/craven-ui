@@ -8,6 +8,7 @@ interface ButtonProps {
   name?: string | undefined;
   type?: "submit" | "reset" | "button" | undefined;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 const getVariantClasses = (variant: ButtonVariantType) => {
@@ -29,6 +30,7 @@ const Button = ({
   variant = "success",
   type = "button",
   disabled,
+  onClick,
 }: ButtonProps) => {
   return (
     <button
@@ -37,6 +39,7 @@ const Button = ({
         !disabled && getVariantClasses(variant)
       }`}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </button>

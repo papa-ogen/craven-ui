@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { useState } from "react";
 
-import { Button, ButtonVariantType } from "../..";
+import { Button, ButtonVariantType, Paragraph } from "../..";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -23,7 +24,20 @@ const Template: ComponentStory<typeof Button> = ({
 }: {
   children: string;
   variant?: ButtonVariantType;
-}) => <Button {...args}>{children}</Button>;
+}) => {
+  const [text, setText] = useState("");
+
+  const onButtonClick = () => {
+    setText("I was clicked.");
+  };
+
+  return (
+    <>
+      <Button {...{ ...args, onClick: onButtonClick }}>{children}</Button>
+      {text && <Paragraph>{text}</Paragraph>}
+    </>
+  );
+};
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
