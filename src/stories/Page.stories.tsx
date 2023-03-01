@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button, Input, Page, Paragraph } from "../components";
+import { Button, Input, Page, Paragraph } from "..";
 
 export default {
   title: "UI/Page",

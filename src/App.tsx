@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, ContextProvider, Page, Paragraph } from "./components/index";
+import { Button, ContextProvider, Page, Paragraph } from "./index";
 
 function App() {
   const [count, setCount] = useState(0);

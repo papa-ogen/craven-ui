@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { HoverCard } from "../components";
+import { HoverCard } from "..";
 
 export default {
   title: "UI/HoverCard",
