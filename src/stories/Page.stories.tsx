@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Button, Input, Page, Paragraph } from "..";
+import { Default } from "./form/LoginForm.stories";
 
 export default {
   title: "UI/Page",
@@ -26,25 +27,13 @@ LoginPage.args = {
       <Paragraph>
         Nulla nam delectus cupiditate assumenda illum earum odit hic repellat
         ex, excepturi aspernatur temporibus mollitia quo, aperiam eius molestiae
-        vero.
+        vero.{" "}
+        <a href="#" className="text-sky-9">
+          Forgot Password
+        </a>
       </Paragraph>
       <div className="flex max-w-sm">
-        <form className="w-full">
-          <Input
-            id="email"
-            label="E-mail"
-            placeholder="Sign in with your e-mail address"
-            required
-          />
-          <Input
-            id="password"
-            label="Password"
-            placeholder="Write your Password"
-            type="password"
-            required
-          />
-          <Button>Log in</Button>
-        </form>
+        <Default />
       </div>
     </>
   ),

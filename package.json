@@ -1,6 +1,6 @@
 {
   "name": "@papa-ogen/craven-ui",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "type": "module",
   "types": "./dist/index.d.ts",
   "files": [
