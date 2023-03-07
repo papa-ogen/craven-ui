@@ -17,9 +17,7 @@ jobs:
       - name: Install and Build 🔧
         run: | # Install npm packages and build the Storybook files
           yarn install
-          yarn deploy-storybook -- --ci
-          env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+          npm run deploy-storybook -- --ci
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
