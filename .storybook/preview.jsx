@@ -1,3 +1,5 @@
+import { themes } from "@storybook/theming";
+
 import "../src/index.css";
 
 export const decorators = [
@@ -15,5 +17,12 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    current: "dark",
+    // Override the default dark theme
+    // dark: { ...themes.dark, appBg: "black" },
+    // Override the default light theme
+    // light: { ...themes.normal, appBg: "red" },
   },
 };

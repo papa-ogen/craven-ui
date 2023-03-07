@@ -21,12 +21,14 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook -o docs",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "storybook-dark-mode": "^2.1.1",
     "vite-plugin-dts": "^2.0.2",
     "vite-plugin-fonts": "^0.7.0"
   },
