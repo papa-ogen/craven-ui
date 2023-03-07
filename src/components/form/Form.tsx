@@ -1,7 +1,19 @@
 import React from "react";
 
-const Form = ({ children }: { children?: React.ReactNode }) => {
-  return <form className="w-full">{children}</form>;
+type AutoCompleteType = "on" | "off";
+
+const Form = ({
+  autoComplete = "on",
+  children,
+}: {
+  autoComplete?: AutoCompleteType;
+  children?: React.ReactNode;
+}) => {
+  return (
+    <form className="w-full" autoComplete={autoComplete}>
+      {children}
+    </form>
+  );
 };
 
 export default Form;
