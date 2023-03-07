@@ -4,6 +4,7 @@ import HoverCard from "./components/HoverCard";
 import Paragraph from "./components/Paragraph";
 import Page from "./components/Page";
 import ContextProvider from "./components/Context";
+import Footer from "./components/Footer";
 
 export {
   Button,
@@ -14,5 +15,6 @@ export {
   ContextProvider,
   Input,
   Form,
+  Footer,
 };
 export type { ButtonVariantType };
