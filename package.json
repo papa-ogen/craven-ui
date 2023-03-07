@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/papa-ogen/craven-ui",
   "main": "./dist/craven-ui.umd.cjs",
   "module": "./dist/craven-ui.js",
@@ -20,12 +21,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build",
-    "deploy-storybook": "storybook-to-ghpages -- --out=.docs"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.4",
-    "@storybook/storybook-deployer": "^2.8.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-dts": "^2.0.2",

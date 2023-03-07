@@ -13,12 +13,4 @@ module.exports = {
   features: {
     storyStoreV7: false,
   },
-  managerHead: (head, { configType }) => {
-    if (configType === "PRODUCTION") {
-      return `
-        ${head}
-        <base href="/docs">
-      `;
-    }
-  },
 };
