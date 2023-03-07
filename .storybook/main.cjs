@@ -17,7 +17,7 @@ module.exports = {
     if (configType === "PRODUCTION") {
       return `
         ${head}
-        <base href="/">
+        <base href="/docs">
       `;
     }
   },
