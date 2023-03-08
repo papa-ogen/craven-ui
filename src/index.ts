@@ -5,6 +5,7 @@ import Paragraph from "./components/Paragraph";
 import Page from "./components/Page";
 import ContextProvider from "./components/Context";
 import Footer from "./components/Footer";
+import Link from "./components/Link";
 
 export {
   Button,
@@ -16,5 +17,6 @@ export {
   Input,
   Form,
   Footer,
+  Link,
 };
 export type { ButtonVariantType };
