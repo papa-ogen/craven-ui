@@ -1,7 +1,5 @@
 export type ButtonVariantType = "error" | "success" | "warning" | "info";
 
-export interface ButtonProps2 extends React.HTMLProps<HTMLButtonElement> {}
-
 interface ButtonProps {
   children: string;
   variant?: ButtonVariantType;
