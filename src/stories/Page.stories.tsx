@@ -9,6 +9,13 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <div className="px-4">
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof Page>;
 
 const Template: ComponentStory<typeof Page> = ({ children, ...args }) => (

@@ -17,3 +17,9 @@ export const Default = Template.bind({});
 Default.args = {
   children: "A Simple link",
 };
+
+export const Invert = Template.bind({});
+Invert.args = {
+  children: "A Simple link",
+  invert: true,
+};

@@ -11,7 +11,12 @@ export default {
 } as ComponentMeta<typeof Paragraph>;
 
 const Template: ComponentStory<typeof Paragraph> = ({ children, ...args }) => (
-  <Paragraph {...args}>{children}</Paragraph>
+  <>
+    <Paragraph {...args}>{children}</Paragraph>
+    <Paragraph {...args}>{children}</Paragraph>
+    <Paragraph {...args}>{children}</Paragraph>
+    <Paragraph {...args}>{children}</Paragraph>
+  </>
 );
 
 export const Default = Template.bind({});
@@ -32,4 +37,10 @@ SmallText.args = {
   variant: "small",
   children:
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque totam molestiae, odio repellat eos possimus placeat illo veniam iste. Dolorem, consequuntur sequi!",
+};
+export const NoMargin = Template.bind({});
+NoMargin.args = {
+  children:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque totam molestiae, odio repellat eos possimus placeat illo veniam iste. Dolorem, consequuntur sequi!",
+  noMargin: true,
 };
