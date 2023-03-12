@@ -4,7 +4,7 @@ import CStudio from "../assets/icons/CStudio";
 
 const Footer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <footer className="h-40 bg-slate-1 w-full flex flex-col border-t-[1px] border-primary-orange">
+    <footer className="bg-gradient-to-b from-mauve-2 w-full flex flex-col border-t-[1px] border-primary-orange">
       {children}
       <div className="flex-grow flex justify-center pt-2">
         <CStudio width="64px" color="#ffffff" />
