@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button, ButtonVariantType, Heading, Paragraph } from "../..";
+import { BeakerIcon } from "@heroicons/react/24/solid";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -21,36 +22,140 @@ export default {
 const Template: ComponentStory<typeof Button> = ({
   children,
 }: {
-  children: string;
+  children: React.ReactNode;
 }) => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       <Heading>Variants</Heading>
-      <div className="space-x-4">
-        <Button onClick={action("clicked")}>{children}</Button>
-        <Button variant="error" onClick={action("clicked")}>
-          {children}
-        </Button>
-        <Button variant="warning" onClick={action("clicked")}>
-          {children}
-        </Button>
-        <Button variant="info" onClick={action("clicked")}>
-          {children}
-        </Button>
+      <div>
+        <Paragraph>Standard</Paragraph>
+        <div className="space-x-4">
+          <Button onClick={action("clicked")}>Success</Button>
+          <Button variant="error" onClick={action("clicked")}>
+            Error
+          </Button>
+          <Button variant="warning" onClick={action("clicked")}>
+            Warning
+          </Button>
+          <Button variant="info" onClick={action("clicked")}>
+            Info
+          </Button>
+        </div>
       </div>
-      <div className="space-x-4">
-        <Button disabled onClick={action("clicked")}>
-          {children}
-        </Button>
-        <Button disabled variant="error" onClick={action("clicked")}>
-          {children}
-        </Button>
-        <Button disabled variant="warning" onClick={action("clicked")}>
-          {children}
-        </Button>
-        <Button disabled variant="info" onClick={action("clicked")}>
-          {children}
-        </Button>
+      <div>
+        <Paragraph>Disabled</Paragraph>
+        <div className="space-x-4">
+          <Button disabled onClick={action("clicked")}>
+            Success
+          </Button>
+          <Button disabled variant="error" onClick={action("clicked")}>
+            Error
+          </Button>
+          <Button disabled variant="warning" onClick={action("clicked")}>
+            Warning
+          </Button>
+          <Button disabled variant="info" onClick={action("clicked")}>
+            Info
+          </Button>
+        </div>
+      </div>
+      <div>
+        <Paragraph>Icon</Paragraph>
+        <div className="space-x-4">
+          <Button onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button variant="error" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button variant="warning" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button variant="info" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+        </div>
+      </div>
+      <div>
+        <Paragraph>Disabled Icon</Paragraph>
+        <div className="space-x-4">
+          <Button disabled onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button disabled variant="error" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button disabled variant="warning" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+          <Button disabled variant="info" onClick={action("clicked")}>
+            <BeakerIcon className="h-6 w-6" />
+          </Button>
+        </div>
+      </div>
+      <div>
+        <Paragraph>Prefix</Paragraph>
+        <div className="space-x-4">
+          <Button
+            onClick={action("clicked")}
+            prefix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Success
+          </Button>
+          <Button
+            variant="error"
+            onClick={action("clicked")}
+            prefix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Error
+          </Button>
+          <Button
+            variant="warning"
+            onClick={action("clicked")}
+            prefix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Warning
+          </Button>
+          <Button
+            variant="info"
+            onClick={action("clicked")}
+            prefix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Info
+          </Button>
+        </div>
+      </div>
+      <div>
+        <Paragraph>Suffix</Paragraph>
+        <div className="space-x-4">
+          <Button
+            onClick={action("clicked")}
+            suffix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Success
+          </Button>
+          <Button
+            variant="error"
+            onClick={action("clicked")}
+            suffix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Error
+          </Button>
+          <Button
+            variant="warning"
+            onClick={action("clicked")}
+            suffix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Warning
+          </Button>
+          <Button
+            variant="info"
+            onClick={action("clicked")}
+            suffix={<BeakerIcon className="h-6 w-6" />}
+          >
+            Info
+          </Button>
+        </div>
       </div>
     </div>
   );
