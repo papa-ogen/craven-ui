@@ -1,6 +1,5 @@
 import Link from "./Link";
 import Paragraph from "./Paragraph";
-import { ReactComponent as Logo } from "../assets/Cstudio_logo_Orange_positive_CMYK_web-01.svg";
 import CStudio from "../assets/icons/CStudio";
 
 const Footer = ({ children }: { children: React.ReactNode }) => {
