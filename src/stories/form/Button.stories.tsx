@@ -1,7 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { Button, ButtonVariantType, Heading, Paragraph } from "../..";
 import { BeakerIcon } from "@heroicons/react/24/solid";
+import { action } from "@storybook/addon-actions";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Button, Heading, Paragraph } from "../..";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -19,11 +19,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const Template: ComponentStory<typeof Button> = () => {
   return (
     <div className="space-y-12">
       <Heading>Variants</Heading>

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button, ContextProvider, Input, Page, Paragraph, Link } from "..";
+import { Link } from "..";
 
 export default {
   title: "UI/Link",

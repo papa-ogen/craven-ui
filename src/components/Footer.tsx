@@ -1,6 +1,6 @@
+import CStudio from "../assets/icons/CStudio";
 import Link from "./Link";
 import Paragraph from "./Paragraph";
-import CStudio from "../assets/icons/CStudio";
 
 const Footer = ({ children }: { children: React.ReactNode }) => {
   return (

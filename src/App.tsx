@@ -1,5 +1,5 @@
+import React from "react";
 import {
-  Button,
   ContextProvider,
   Footer,
   Heading,
@@ -12,8 +12,8 @@ function App() {
   return (
     <ContextProvider>
       <div className="max-w-sm md:max-w-xl flex-col flex p-4 md:p-8 justify-center items-center flex-grow">
-        <Heading>C Studio AB</Heading>
-        <Page title="Craven UI">
+        <Heading>Craven UI</Heading>
+        <Page title="What is it?">
           <Paragraph>A simple UI library that is highly opiniated.</Paragraph>
           <Paragraph>
             Built with React, TypeScript, Tailwindcss and Vite
@@ -24,7 +24,6 @@ function App() {
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
           </Paragraph>
-          <Button>Hello World</Button>
         </Page>
       </div>
       <Footer>
