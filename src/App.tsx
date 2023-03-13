@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ContextProvider,
   Footer,
@@ -6,6 +5,7 @@ import {
   Link,
   Page,
   Paragraph,
+  Toast,
 } from "./index";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
           </Paragraph>
+          <Toast title="Notification Title" />
         </Page>
       </div>
       <Footer>

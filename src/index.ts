@@ -7,6 +7,7 @@ import Link from "./components/Link";
 import Page from "./components/Page";
 import Paragraph from "./components/Paragraph";
 import Spinner from "./components/Spinner";
+import Toast from "./components/Toast";
 import { Button, ButtonVariantType, Form, Input } from "./components/form";
 
 export {
@@ -22,5 +23,6 @@ export {
   Link,
   InlineLoading,
   Spinner,
+  Toast,
 };
 export type { ButtonVariantType };
