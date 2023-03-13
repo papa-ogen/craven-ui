@@ -14,14 +14,14 @@ interface ButtonProps {
 const getVariantClasses = (variant: ButtonVariantType) => {
   switch (variant) {
     case "error":
-      return "border-red-10 text-red-10";
+      return "border-red-10 text-red-10 bg-red-2";
     case "warning":
-      return "border-yellow-10 text-yellow-10";
+      return "border-yellow-10 text-yellow-10 bg-yellow-2";
     case "info":
-      return "border-blue-10 text-blue-10";
+      return "border-blue-10 text-blue-10 bg-blue-2";
     case "success":
     default:
-      return "border-grass-10 text-grass-10";
+      return "border-grass-10 text-grass-10 bg-grass-2";
   }
 };
 
