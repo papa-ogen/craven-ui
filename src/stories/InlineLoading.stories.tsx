@@ -16,9 +16,8 @@ const MockSubmission = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [description, setDescription] = useState("Submitting...");
-  const [ariaLive, setAriaLive] = useState<
-    "off" | "assertive" | "polite" | undefined
-  >("off");
+  const [ariaLive, setAriaLive] =
+    useState<"off" | "assertive" | "polite" | undefined>("off");
   const handleSubmit = () => {
     setIsSubmitting(true);
     setAriaLive("assertive");
@@ -53,6 +52,13 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <div className="p-4">
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof InlineLoading>;
 
 const Template: ComponentStory<typeof InlineLoading> = () => (

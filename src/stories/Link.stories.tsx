@@ -7,6 +7,13 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <div className="p-4">
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof Link>;
 
 const Template: ComponentStory<typeof Link> = ({ children, ...args }) => (
