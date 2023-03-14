@@ -59,6 +59,7 @@
     "babel-loader": "^8.3.0",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-sort-exports": "^0.8.0",
     "gh-pages": "^5.0.0",
     "jest-image-snapshot": "^6.1.0",
     "postcss": "^8.4.21",
