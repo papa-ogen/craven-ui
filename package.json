@@ -38,6 +38,7 @@
     "vite-plugin-fonts": "^0.7.0"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.6.0",
     "@babel/core": "^7.21.0",
     "@radix-ui/colors": "^0.1.8",
     "@storybook/addon-actions": "^6.5.16",

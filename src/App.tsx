@@ -12,7 +12,7 @@ import {
 function App() {
   return (
     <ContextProvider>
-      <div className="max-w-sm md:max-w-xl flex-col flex p-4 md:p-8 justify-center items-center flex-grow">
+      <main className="max-w-sm md:max-w-xl flex-col flex p-4 md:p-8 justify-center items-center flex-grow">
         <Heading>Craven UI</Heading>
         <Page title="What is it?">
           <Paragraph>A simple UI library that is highly opiniated.</Paragraph>
@@ -25,7 +25,7 @@ function App() {
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
           </Paragraph>
-          <div className="space-y-4 pb-4">
+          <section className="space-y-4 pb-4">
             <Toast
               title="Notification Title"
               subTitle="sub title"
@@ -34,17 +34,17 @@ function App() {
             <Toast title="Notification Title" variant="info" />
             <Toast title="Notification Title" variant="success" />
             <Toast title="Notification Title" variant="warning" />
-          </div>
-          <div className="space-x-1">
+          </section>
+          <section className="space-x-1">
             <Tag text="tag content" />
             <Tag text="tag content" variant="crimson" />
             <Tag text="tag content" variant="pink" />
             <Tag text="tag content" variant="plum" />
             <Tag text="tag content" variant="purple" />
             <Tag text="tag content" variant="violet" />
-          </div>
+          </section>
         </Page>
-      </div>
+      </main>
       <Footer>
         <div className="p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
           <Paragraph noMargin>Find me on Social Media</Paragraph>

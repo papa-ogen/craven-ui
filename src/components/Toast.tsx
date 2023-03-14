@@ -42,6 +42,7 @@ const Toast = ({
           <button
             className={`hover:text-${color}-10`}
             onClick={onClick && onClick}
+            aria-label="Close Button"
           >
             <XCircleIcon className="h-5 w-5" />
           </button>

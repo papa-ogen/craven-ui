@@ -42,6 +42,7 @@ const Button = ({
       }`}
       disabled={disabled}
       onClick={onClick}
+      aria-label="Button"
     >
       <div className="flex space-x-2">
         {prefix && <span>{prefix}</span>}
