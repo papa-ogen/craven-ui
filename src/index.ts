@@ -9,7 +9,7 @@ import Page from "./components/Page";
 import Paragraph from "./components/Paragraph";
 import Spinner from "./components/Spinner";
 import Tag from "./components/Tag";
-import Toast from "./components/Toast";
+import Toast, { ToastVariantType } from "./components/Toast";
 
 export {
   Button,
@@ -27,4 +27,4 @@ export {
   Tag,
   Toast,
 };
-export type { ButtonVariantType };
+export type { ButtonVariantType, ToastVariantType };

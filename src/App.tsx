@@ -5,6 +5,7 @@ import {
   Link,
   Page,
   Paragraph,
+  Tag,
   Toast,
 } from "./index";
 
@@ -24,7 +25,24 @@ function App() {
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
           </Paragraph>
-          <Toast title="Notification Title" />
+          <div className="space-y-4 pb-4">
+            <Toast
+              title="Notification Title"
+              subTitle="sub title"
+              caption="lorem ipsum"
+            />
+            <Toast title="Notification Title" variant="info" />
+            <Toast title="Notification Title" variant="success" />
+            <Toast title="Notification Title" variant="warning" />
+          </div>
+          <div className="space-x-1">
+            <Tag text="tag content" />
+            <Tag text="tag content" variant="crimson" />
+            <Tag text="tag content" variant="pink" />
+            <Tag text="tag content" variant="plum" />
+            <Tag text="tag content" variant="purple" />
+            <Tag text="tag content" variant="violet" />
+          </div>
         </Page>
       </div>
       <Footer>

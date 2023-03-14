@@ -1,15 +1,36 @@
-import React from "react";
+type VariantType = "tomato" | "crimson" | "pink" | "plum" | "purple" | "violet";
 
-type VariantType = "red" | "yellow" | "blue" | "green";
+const getVariantCSS = (variant: VariantType) => {
+  switch (variant) {
+    case "tomato":
+      return "bg-tomato-11 text-mauve-12";
+    case "crimson":
+      return "bg-crimson-11 text-mauve-12";
+    case "pink":
+      return "bg-pink-11 text-mauve-12";
+    case "plum":
+      return "bg-plum-11 text-mauve-12";
+    case "purple":
+      return "bg-purple-11 text-mauve-12";
+    case "violet":
+      return "bg-violet-11 text-mauve-12";
+  }
+};
 
 const Tag = ({
   text,
-  variant = "green",
+  variant = "tomato",
 }: {
   text: string;
-  variant: VariantType;
+  variant?: VariantType;
 }) => {
-  return <span className="bg-grass-10">{text}</span>;
+  return (
+    <span
+      className={`${getVariantCSS(variant)} px-1.5 pb-0.5 rounded-md text-xs`}
+    >
+      {text}
+    </span>
+  );
 };
 
 export default Tag;

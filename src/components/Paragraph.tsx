@@ -13,7 +13,7 @@ const Paragraph = ({
     <p
       className={`${noMargin ? "" : "mt-1 mb-3 "}font-zonapro zonapro${
         variant === "normal" ? "" : " text-sm"
-      } ${truncate && " truncate ..."}`}
+      } ${truncate ? "truncate ..." : ""}`}
     >
       {children}
     </p>
