@@ -23,10 +23,12 @@ const Template: ComponentStory<typeof Link> = ({ children, ...args }) => (
 export const Default = Template.bind({});
 Default.args = {
   children: "A Simple link",
+  ariaLabel: "A Simple link",
 };
 
 export const Invert = Template.bind({});
 Invert.args = {
   children: "A Simple link",
   invert: true,
+  ariaLabel: "A Simple link",
 };

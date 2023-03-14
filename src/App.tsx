@@ -49,6 +49,7 @@ function App() {
         <div className="p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
           <Paragraph noMargin>Find me on Social Media</Paragraph>
           <Link
+            ariaLabel="LinkedIn"
             color="text-social-linkedin"
             url="https://www.linkedin.com/in/j%C3%B6rgen-thelin-48693a29/"
             target="_blank"
@@ -63,6 +64,7 @@ function App() {
             </svg>
           </Link>
           <Link
+            ariaLabel="Github"
             hoverColor="text-social-github"
             color="text-slate-12"
             url="https://github.com/papa-ogen"

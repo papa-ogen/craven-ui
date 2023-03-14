@@ -3,6 +3,7 @@ import React from "react";
 const Link = ({
   url,
   children,
+  ariaLabel,
   target,
   invert,
   color,
@@ -10,6 +11,7 @@ const Link = ({
 }: {
   url?: string;
   children: React.ReactNode;
+  ariaLabel: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   invert?: boolean;
   color?: string;
@@ -22,6 +24,7 @@ const Link = ({
       href={url || "#"}
       target={target}
       className={`${linkColor} ${linkHoverColor} underline`}
+      aria-label={ariaLabel}
     >
       {children}
     </a>
