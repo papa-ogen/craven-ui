@@ -5,8 +5,7 @@ import {
   Link,
   Page,
   Paragraph,
-  Tag,
-  Toast,
+  StatusLabel,
 } from "./index";
 
 function App() {
@@ -25,23 +24,39 @@ function App() {
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
           </Paragraph>
-          <section className="space-y-4 pb-4">
-            <Toast
-              title="Notification Title"
-              subTitle="sub title"
-              caption="lorem ipsum"
-            />
-            <Toast title="Notification Title" variant="info" />
-            <Toast title="Notification Title" variant="success" />
-            <Toast title="Notification Title" variant="warning" />
+          <section>
+            <StatusLabel>Data has been sent.</StatusLabel>
+            <StatusLabel type="error">Data failed.</StatusLabel>
+            <StatusLabel type="warning">
+              Not all files was uploaded.
+            </StatusLabel>
+            <StatusLabel type="info">Pro tip: yolo.</StatusLabel>
           </section>
-          <section className="space-x-1">
-            <Tag text="tag content" />
-            <Tag text="tag content" variant="crimson" />
-            <Tag text="tag content" variant="pink" />
-            <Tag text="tag content" variant="plum" />
-            <Tag text="tag content" variant="purple" />
-            <Tag text="tag content" variant="violet" />
+          <section>
+            <StatusLabel variant="filled">Data has been sent.</StatusLabel>
+            <StatusLabel variant="filled" type="error">
+              Data failed.
+            </StatusLabel>
+            <StatusLabel variant="filled" type="warning">
+              Not all files was uploaded.
+            </StatusLabel>
+            <StatusLabel variant="filled" type="info">
+              Pro tip: yolo.
+            </StatusLabel>
+          </section>
+          <section>
+            <StatusLabel variant="filled-border">
+              Data has been sent.
+            </StatusLabel>
+            <StatusLabel variant="filled-border" type="error">
+              Data failed.
+            </StatusLabel>
+            <StatusLabel variant="filled-border" type="warning">
+              Not all files was uploaded.
+            </StatusLabel>
+            <StatusLabel variant="filled-border" type="info">
+              Pro tip: yolo.
+            </StatusLabel>
           </section>
         </Page>
       </main>

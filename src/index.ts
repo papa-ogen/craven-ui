@@ -8,6 +8,7 @@ import Link from "./components/Link";
 import Page from "./components/Page";
 import Paragraph from "./components/Paragraph";
 import Spinner from "./components/Spinner";
+import StatusLabel from "./components/StatusLabel";
 import Tag from "./components/Tag";
 import Toast, { ToastVariantType } from "./components/Toast";
 
@@ -24,6 +25,7 @@ export {
   Page,
   Paragraph,
   Spinner,
+  StatusLabel,
   Tag,
   Toast,
 };
