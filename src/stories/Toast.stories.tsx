@@ -16,7 +16,29 @@ export default {
 const Template: ComponentStory<typeof Toast> = () => {
   return (
     <div className="space-y-1 flex-col">
-      <Toast title="Notification Title" />
+      <Toast
+        title="Notification Title"
+        subTitle="sub title"
+        caption="lorem ipsum"
+      />
+      <Toast
+        title="Notification Title"
+        subTitle="sub title"
+        caption="lorem ipsum"
+        variant="info"
+      />
+      <Toast
+        title="Notification Title"
+        subTitle="sub title"
+        caption="lorem ipsum"
+        variant="success"
+      />
+      <Toast
+        title="Notification Title"
+        subTitle="sub title"
+        caption="lorem ipsum"
+        variant="warning"
+      />
     </div>
   );
 };
