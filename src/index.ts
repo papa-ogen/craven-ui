@@ -6,10 +6,10 @@ import HoverCard from "./components/HoverCard";
 import InlineLoading from "./components/InlineLoading";
 import Link from "./components/Link";
 import Page from "./components/Page";
-import Paragraph from "./components/Paragraph";
 import Spinner from "./components/Spinner";
 import StatusLabel from "./components/StatusLabel";
 import Tag from "./components/Tag";
+import Text from "./components/Text";
 import Toast, { ToastVariantType } from "./components/Toast";
 
 export {
@@ -23,10 +23,10 @@ export {
   Input,
   Link,
   Page,
-  Paragraph,
   Spinner,
   StatusLabel,
   Tag,
+  Text,
   Toast,
 };
 export type { ButtonVariantType, ToastVariantType };

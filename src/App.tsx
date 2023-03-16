@@ -1,12 +1,4 @@
-import {
-  ContextProvider,
-  Footer,
-  Heading,
-  Link,
-  Page,
-  Paragraph,
-  StatusLabel,
-} from "./index";
+import { ContextProvider, Footer, Heading, Link, Page, Text } from "./index";
 
 function App() {
   return (
@@ -14,55 +6,50 @@ function App() {
       <main className="max-w-sm md:max-w-xl flex-col flex p-4 md:p-8 justify-center items-center flex-grow">
         <Heading>Craven UI</Heading>
         <Page title="What is it?">
-          <Paragraph>A simple UI library that is highly opiniated.</Paragraph>
-          <Paragraph>
+          <Text leading="loose">
+            A simple UI library that is highly opiniated.
+          </Text>
+          <Text leading="loose">
             Built with React, TypeScript, Tailwindcss and Vite
-          </Paragraph>
-          <Paragraph variant="small">
+          </Text>
+          <Text italic>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
             sapiente sit tenetur non culpa facilis provident totam? Quis
             sapiente aliquam similique optio, molestiae consequatur iure quidem
             temporibus porro. Impedit, quisquam!
-          </Paragraph>
-          <section>
-            <StatusLabel>Data has been sent.</StatusLabel>
-            <StatusLabel type="error">Data failed.</StatusLabel>
-            <StatusLabel type="warning">
-              Not all files was uploaded.
-            </StatusLabel>
-            <StatusLabel type="info">Pro tip: yolo.</StatusLabel>
-          </section>
-          <section>
-            <StatusLabel variant="filled">Data has been sent.</StatusLabel>
-            <StatusLabel variant="filled" type="error">
-              Data failed.
-            </StatusLabel>
-            <StatusLabel variant="filled" type="warning">
-              Not all files was uploaded.
-            </StatusLabel>
-            <StatusLabel variant="filled" type="info">
-              Pro tip: yolo.
-            </StatusLabel>
-          </section>
-          <section>
-            <StatusLabel variant="filled-border">
-              Data has been sent.
-            </StatusLabel>
-            <StatusLabel variant="filled-border" type="error">
-              Data failed.
-            </StatusLabel>
-            <StatusLabel variant="filled-border" type="warning">
-              Not all files was uploaded.
-            </StatusLabel>
-            <StatusLabel variant="filled-border" type="info">
-              Pro tip: yolo.
-            </StatusLabel>
-          </section>
+          </Text>
+          <br />
+          <Heading>ScreenTitle H1</Heading>
+          <Heading type="sectionTitle" as="h2">
+            SectionTitle H2
+          </Heading>
+          <Heading type="blockTitle" as="h3">
+            BlockTitle H3
+          </Heading>
+          <Heading type="subBlockTitle" as="h4">
+            SubBlockTitle H4
+          </Heading>
+          <Heading type="subSubBlockTitle" as="h5">
+            SubSubBlockTitle H5
+          </Heading>
+          <Text size="sm">
+            Built with React, TypeScript, Tailwindcss and{" "}
+            <Text
+              size="sm"
+              weight="bold"
+              as="span"
+              color="link"
+              decoration="underline"
+            >
+              Vite.
+            </Text>{" "}
+            And other stuff.
+          </Text>
         </Page>
       </main>
       <Footer>
         <div className="p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
-          <Paragraph noMargin>Find me on Social Media</Paragraph>
+          <Text>Find me on Social Media</Text>
           <Link
             ariaLabel="LinkedIn"
             color="text-social-linkedin"

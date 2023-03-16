@@ -9,6 +9,8 @@ module.exports = {
       },
     },
     colors: {
+      white: "#FFFFFF",
+      black: "#000000",
       transparent: "transparent",
       current: "currentColor",
       primary: {

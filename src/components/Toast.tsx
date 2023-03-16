@@ -2,7 +2,7 @@ import {
   ExclamationCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import Paragraph from "./Paragraph";
+import Text from "./Text";
 
 export type ToastVariantType = "error" | "success" | "warning" | "info";
 
@@ -50,14 +50,14 @@ const Toast = ({
       </div>
       {subTitle && (
         <div className="pl-6">
-          <Paragraph variant="small" noMargin>
+          <Text variant="small" noMargin>
             Sub Title
-          </Paragraph>
+          </Text>
         </div>
       )}
       {caption && (
         <div className="pl-6 mt-8">
-          <Paragraph variant="small">{caption}</Paragraph>
+          <Text variant="small">{caption}</Text>
         </div>
       )}
     </div>

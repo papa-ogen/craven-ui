@@ -1,8 +1,5 @@
 import React from "react";
-
-const Title = ({ children }: { children: string }) => {
-  return <h2 className="text-cyan-10 text-xl tk-uniwars">{children}</h2>;
-};
+import Heading from "./Heading";
 
 const Page = ({
   title,
@@ -13,7 +10,9 @@ const Page = ({
 }) => {
   return (
     <div className="py-4 max-w-4xl mb-auto">
-      <Title>{title}</Title>
+      <Heading type="sectionTitle" tag="h2">
+        {title}
+      </Heading>
       {children}
     </div>
   );

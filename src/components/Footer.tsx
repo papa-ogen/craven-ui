@@ -1,6 +1,6 @@
 import CStudio from "../assets/icons/CStudio";
 import Link from "./Link";
-import Paragraph from "./Paragraph";
+import Text from "./Text";
 
 const Footer = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,10 +10,12 @@ const Footer = ({ children }: { children: React.ReactNode }) => {
         <CStudio width="64px" color="#ffffff" />
       </div>
       <div className="flex justify-center p-3 pt-4">
-        <Paragraph variant="small" noMargin>
+        <Text>
           <span className="pr-2">© 2023 Copyright:</span>
-          <Link url="https://craven-studio.com">Craven Studio</Link>
-        </Paragraph>
+          <Link ariaLabel="Visit Craven Studio" url="https://craven-studio.com">
+            Craven Studio
+          </Link>
+        </Text>
       </div>
     </footer>
   );
