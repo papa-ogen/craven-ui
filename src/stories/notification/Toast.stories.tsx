@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Toast } from "..";
+import { Toast } from "../..";
 
 export default {
-  title: "UI/Toast",
+  title: "Notification/Toast",
   component: Toast,
   decorators: [
     (Story) => (

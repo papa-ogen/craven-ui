@@ -55,14 +55,17 @@ const StatusLabel = ({
   children,
   variant = "outline",
   type = "success",
+  role,
 }: {
   children: React.ReactNode;
   type?: StatusLabelType;
   variant?: StatusLabelVariantType;
+  role?: React.AriaRole;
 }) => {
   return (
     <div
-      className={`${getVariantCSS(variant, type)} px-2 py-1 inline-block m-4`}
+      role={role}
+      className={`${getVariantCSS(variant, type)} px-2 py-1 inline-block`}
     >
       {children}
     </div>

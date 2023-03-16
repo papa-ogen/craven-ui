@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { within, userEvent, waitFor } from "@storybook/testing-library";
 import { useState } from "react";
 import { expect } from "@storybook/jest";
-import { Button, Input, Form } from "../../";
+import { Button, Input, Form, StatusLabel } from "../../";
 
 export default {
   title: "UI/Form/Login",
@@ -35,8 +35,10 @@ const Template: ComponentStory<typeof Form> = () => {
         type="password"
         required
       />
-      <Button onClick={onSubmit}>Log in</Button>
-      {dataSent && <p role="alert">Data has been sent</p>}
+      <div className="space-x-4">
+        <Button onClick={onSubmit}>Log in</Button>
+        {dataSent && <StatusLabel role="alert">Data has been sent</StatusLabel>}
+      </div>
     </Form>
   );
 };

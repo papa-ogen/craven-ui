@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Heading, StatusLabel } from "..";
+import { Heading, Text, StatusLabel } from "..";
 
 export default {
   title: "UI/StatusLabel",
@@ -15,40 +15,47 @@ export default {
 
 const Template: ComponentStory<typeof StatusLabel> = () => {
   return (
-    <div>
-      <Heading>Outline</Heading>
-      <section>
-        <StatusLabel>Data has been sent.</StatusLabel>
-        <StatusLabel type="error">Data failed.</StatusLabel>
-        <StatusLabel type="warning">Not all files was uploaded.</StatusLabel>
-        <StatusLabel type="info">Pro tip: yolo.</StatusLabel>
-      </section>
-      <Heading>Filled</Heading>
-      <section>
-        <StatusLabel variant="filled">Data has been sent.</StatusLabel>
-        <StatusLabel variant="filled" type="error">
-          Data failed.
-        </StatusLabel>
-        <StatusLabel variant="filled" type="warning">
-          Not all files was uploaded.
-        </StatusLabel>
-        <StatusLabel variant="filled" type="info">
-          Pro tip: yolo.
-        </StatusLabel>
-      </section>
-      <Heading>Filled-Border</Heading>
-      <section>
-        <StatusLabel variant="filled-border">Data has been sent.</StatusLabel>
-        <StatusLabel variant="filled-border" type="error">
-          Data failed.
-        </StatusLabel>
-        <StatusLabel variant="filled-border" type="warning">
-          Not all files was uploaded.
-        </StatusLabel>
-        <StatusLabel variant="filled-border" type="info">
-          Pro tip: yolo.
-        </StatusLabel>
-      </section>
+    <div className="space-y-12">
+      <Heading>Variants</Heading>
+      <div>
+        <Text>Outline</Text>
+        <section className="space-x-4">
+          <StatusLabel>Data has been sent.</StatusLabel>
+          <StatusLabel type="error">Data failed.</StatusLabel>
+          <StatusLabel type="warning">Not all files was uploaded.</StatusLabel>
+          <StatusLabel type="info">Pro tip: yolo.</StatusLabel>
+        </section>
+      </div>
+      <div>
+        <Text>Filled</Text>
+        <section className="space-x-4">
+          <StatusLabel variant="filled">Data has been sent.</StatusLabel>
+          <StatusLabel variant="filled" type="error">
+            Data failed.
+          </StatusLabel>
+          <StatusLabel variant="filled" type="warning">
+            Not all files was uploaded.
+          </StatusLabel>
+          <StatusLabel variant="filled" type="info">
+            Pro tip: yolo.
+          </StatusLabel>
+        </section>
+      </div>
+      <div>
+        <Text>Filled-Border</Text>
+        <section className="space-x-4">
+          <StatusLabel variant="filled-border">Data has been sent.</StatusLabel>
+          <StatusLabel variant="filled-border" type="error">
+            Data failed.
+          </StatusLabel>
+          <StatusLabel variant="filled-border" type="warning">
+            Not all files was uploaded.
+          </StatusLabel>
+          <StatusLabel variant="filled-border" type="info">
+            Pro tip: yolo.
+          </StatusLabel>
+        </section>
+      </div>
     </div>
   );
 };

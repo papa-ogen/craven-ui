@@ -9,9 +9,9 @@ type TagType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "legend" | "span";
 const getHeadingCSS = (type: HeadingType) => {
   switch (type) {
     case "subSubBlockTitle":
-      return "text-cyan-10 text-sm";
+      return "text-cyan-10 text-sm font-zonapro zonapro";
     case "subBlockTitle":
-      return "text-cyan-10 text-base";
+      return "text-cyan-10 text-base font-zonapro zonapro";
     case "blockTitle":
       return "text-cyan-10 text-lg tk-uniwars";
     case "sectionTitle":

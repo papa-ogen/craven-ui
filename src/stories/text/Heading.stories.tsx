@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Heading } from "..";
+import { Heading } from "../..";
 
 export default {
   title: "Text/Heading",
@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Heading>;
 
 const Template: ComponentStory<typeof Heading> = () => (
-  <>
+  <div className="space-y-4">
     <Heading>ScreenTitle H1</Heading>
     <Heading type="sectionTitle" as="h2">
       SectionTitle H2
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Heading> = () => (
     <Heading type="subSubBlockTitle" as="h5">
       SubSubBlockTitle H5
     </Heading>
-  </>
+  </div>
 );
 
 export const Variants = Template.bind({});

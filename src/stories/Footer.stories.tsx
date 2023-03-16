@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Footer, Link, Paragraph } from "..";
+import { Footer, Link, Text } from "..";
 
 export default {
   title: "UI/Footer",
@@ -10,8 +10,9 @@ export default {
 const Template: ComponentStory<typeof Footer> = () => (
   <Footer>
     <div className="p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
-      <Paragraph noMargin>Find me on Social Media</Paragraph>
+      <Text>Find me on Social Media</Text>
       <Link
+        ariaLabel="Find me on LinkedIn"
         color="text-social-linkedin"
         url="https://www.linkedin.com/in/j%C3%B6rgen-thelin-48693a29/"
         target="_blank"
@@ -26,6 +27,7 @@ const Template: ComponentStory<typeof Footer> = () => (
         </svg>
       </Link>
       <Link
+        ariaLabel="Find me on Github"
         hoverColor="text-social-github"
         color="text-slate-12"
         url="https://github.com/papa-ogen"

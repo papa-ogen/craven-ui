@@ -1,7 +1,7 @@
 import { BeakerIcon } from "@heroicons/react/24/solid";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button, Heading, Paragraph } from "../..";
+import { Button, Heading, Text } from "../..";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof Button> = () => {
     <div className="space-y-12">
       <Heading>Variants</Heading>
       <div>
-        <Paragraph>Standard</Paragraph>
+        <Text>Standard</Text>
         <div className="space-x-4">
           <Button onClick={action("clicked")}>Success</Button>
           <Button variant="error" onClick={action("clicked")}>
@@ -39,7 +39,7 @@ const Template: ComponentStory<typeof Button> = () => {
         </div>
       </div>
       <div>
-        <Paragraph>Disabled</Paragraph>
+        <Text>Disabled</Text>
         <div className="space-x-4">
           <Button disabled onClick={action("clicked")}>
             Success
@@ -56,7 +56,7 @@ const Template: ComponentStory<typeof Button> = () => {
         </div>
       </div>
       <div>
-        <Paragraph>Icon</Paragraph>
+        <Text>Icon</Text>
         <div className="space-x-4">
           <Button onClick={action("clicked")}>
             <BeakerIcon className="h-6 w-6" />
@@ -73,7 +73,7 @@ const Template: ComponentStory<typeof Button> = () => {
         </div>
       </div>
       <div>
-        <Paragraph>Disabled Icon</Paragraph>
+        <Text>Disabled Icon</Text>
         <div className="space-x-4">
           <Button disabled onClick={action("clicked")}>
             <BeakerIcon className="h-6 w-6" />
@@ -90,7 +90,7 @@ const Template: ComponentStory<typeof Button> = () => {
         </div>
       </div>
       <div>
-        <Paragraph>Prefix</Paragraph>
+        <Text>Prefix</Text>
         <div className="space-x-4">
           <Button
             onClick={action("clicked")}
@@ -122,7 +122,7 @@ const Template: ComponentStory<typeof Button> = () => {
         </div>
       </div>
       <div>
-        <Paragraph>Suffix</Paragraph>
+        <Text>Suffix</Text>
         <div className="space-x-4">
           <Button
             onClick={action("clicked")}

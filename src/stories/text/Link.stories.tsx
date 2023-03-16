@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Link } from "..";
+import { Link } from "../..";
 
 export default {
-  title: "UI/Link",
+  title: "Text/Link",
   component: Link,
   parameters: {
     layout: "fullscreen",

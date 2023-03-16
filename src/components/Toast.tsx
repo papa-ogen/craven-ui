@@ -34,7 +34,9 @@ const Toast = ({
 }) => {
   const color = getVariantColor(variant);
   return (
-    <div className={`border-l-2 border-${color}-10 p-4 bg-primary-dark-gray`}>
+    <div
+      className={`border-l-2 border-${color}-10 p-4 bg-primary-dark-gray hover:bg-slate-6 transition ease-in-out delay-100`}
+    >
       <div className="flex items-center space-x-2">
         <ExclamationCircleIcon className={`h-4 w-4 text-${color}-10`} />
         <h5 className="font-bold grow">{title}</h5>
@@ -50,14 +52,12 @@ const Toast = ({
       </div>
       {subTitle && (
         <div className="pl-6">
-          <Text variant="small" noMargin>
-            Sub Title
-          </Text>
+          <Text size="sm">Sub Title</Text>
         </div>
       )}
       {caption && (
         <div className="pl-6 mt-8">
-          <Text variant="small">{caption}</Text>
+          <Text size="xs">{caption}</Text>
         </div>
       )}
     </div>

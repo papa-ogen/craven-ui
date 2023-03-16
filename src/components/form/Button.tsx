@@ -39,7 +39,7 @@ const Button = ({
       type={type}
       className={`border rounded-sm px-2 opacity-75 hover:opacity-100 py-1 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:hover:opacity-80 ${
         !disabled && getVariantClasses(variant)
-      }`}
+      } transition ease-in-out delay-100`}
       disabled={disabled}
       onClick={onClick}
       aria-label="Button"
