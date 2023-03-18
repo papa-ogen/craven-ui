@@ -48,6 +48,7 @@ const Text = ({
   decoration,
   truncate,
   leading,
+  noMargin,
 }: {
   children: React.ReactNode;
   as?: TagType;
@@ -58,6 +59,7 @@ const Text = ({
   decoration?: DecorationType;
   truncate?: boolean;
   leading?: LeadingType;
+  noMargin?: boolean;
 }) => {
   const CustomTag = `${as}` as keyof JSX.IntrinsicElements;
 
@@ -67,7 +69,7 @@ const Text = ({
         italic ? " italic" : ""
       } ${getTextColor(color)}${truncate ? " truncate ..." : ""} ${
         decoration ? decoration : ""
-      } ${getLeading(leading)}`}
+      } ${getLeading(leading)}${noMargin ? "" : " mt-1 mb-2"}`}
     >
       {children}
     </CustomTag>

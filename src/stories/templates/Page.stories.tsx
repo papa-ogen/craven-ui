@@ -39,17 +39,15 @@ LoginPage.args = {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere,
         aspernatur?
       </Text>
-      <br />
       <Heading type="subBlockTitle">Lorem Ipsum</Heading>
       <Text>
         Nulla nam delectus cupiditate assumenda illum earum odit hic repellat
         ex, excepturi aspernatur temporibus mollitia quo, aperiam eius molestiae
         vero. <Link ariaLabel="Forgot Password Link">Forgot Password</Link>
       </Text>
-      <div className="flex max-w-sm pt-4">
+      <div className="flex max-w-sm py-4">
         <Default />
       </div>
-      <br />
       <Heading type="subSubBlockTitle">Lorem Ipsum</Heading>
       <Text size="xs">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate amet

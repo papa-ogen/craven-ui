@@ -12,8 +12,21 @@ export default {
 
 const Template: ComponentStory<typeof Text> = ({ children, ...args }) => (
   <>
-    <Text {...args}>{children}</Text>
-    <Text {...args}>{children}</Text>
+    <Text>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
+      dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque
+      totam molestiae,{" "}
+      <Text as="span" color="link">
+        odio repellat eos possimus placeat illo
+      </Text>{" "}
+      veniam iste.{" "}
+      <Text as="span" decoration="underline">
+        Dolorem
+      </Text>
+      , consequuntur sequi!
+    </Text>
+    <Text noMargin>A little segment</Text>
+    <Text noMargin>Another little segment</Text>
     <Text {...args}>{children}</Text>
     <Text {...args}>{children}</Text>
     <Text size="sm">
@@ -38,16 +51,11 @@ Default.args = {
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque totam molestiae, odio repellat eos possimus placeat illo veniam iste. Dolorem, consequuntur sequi!",
 };
 
-export const NoMargin = Template.bind({});
-NoMargin.args = {
-  children:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque totam molestiae, odio repellat eos possimus placeat illo veniam iste. Dolorem, consequuntur sequi!",
-};
-
 export const SmallText = Template.bind({});
 SmallText.args = {
   children:
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dignissimos, sapiente deserunt mollitia aliquid repudiandae soluta atque totam molestiae, odio repellat eos possimus placeat illo veniam iste. Dolorem, consequuntur sequi!",
+  size: "xs",
 };
 
 export const Truncate = Template.bind({});
