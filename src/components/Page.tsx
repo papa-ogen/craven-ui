@@ -10,7 +10,7 @@ const Page = ({
 }) => {
   return (
     <div className="py-4 max-w-4xl mb-auto">
-      <Heading type="sectionTitle" tag="h2">
+      <Heading type="sectionTitle" as="h2">
         {title}
       </Heading>
       {children}

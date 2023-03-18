@@ -1,8 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { within, userEvent, waitFor } from "@storybook/testing-library";
-import { useState } from "react";
 import { expect } from "@storybook/jest";
-import { Button, Input, Form, StatusLabel } from "../../";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { userEvent, within } from "@storybook/testing-library";
+import { useState } from "react";
+import { Button, Form, Input, StatusLabel } from "../../";
 
 export default {
   title: "UI/Form/Login",
@@ -27,6 +27,7 @@ const Template: ComponentStory<typeof Form> = () => {
         label="E-mail"
         placeholder="Sign in with your e-mail address"
         required
+        disabled={dataSent}
       />
       <Input
         id="password"
@@ -34,9 +35,12 @@ const Template: ComponentStory<typeof Form> = () => {
         placeholder="Write your Password"
         type="password"
         required
+        disabled={dataSent}
       />
       <div className="space-x-4">
-        <Button onClick={onSubmit}>Log in</Button>
+        <Button onClick={onSubmit} disabled={dataSent}>
+          Log in
+        </Button>
         {dataSent && <StatusLabel role="alert">Data has been sent</StatusLabel>}
       </div>
     </Form>
@@ -70,4 +74,7 @@ Default.play = async ({ canvasElement }) => {
   await userEvent.click(submitButton);
 
   await expect(canvas.getByRole("alert")).toBeInTheDocument();
+  await expect(emailInput).toHaveAttribute("disabled");
+  await expect(passwordInput).toHaveAttribute("disabled");
+  await expect(submitButton).toHaveAttribute("disabled");
 };
