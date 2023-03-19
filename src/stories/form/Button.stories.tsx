@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Button> = () => {
       <Heading>Variants</Heading>
       <div>
         <Text>Standard</Text>
-        <div className="space-x-4">
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <Button onClick={action("clicked")}>Success</Button>
           <Button variant="error" onClick={action("clicked")}>
             Error
@@ -40,7 +40,7 @@ const Template: ComponentStory<typeof Button> = () => {
       </div>
       <div>
         <Text>Disabled</Text>
-        <div className="space-x-4">
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <Button disabled onClick={action("clicked")}>
             Success
           </Button>
@@ -91,7 +91,7 @@ const Template: ComponentStory<typeof Button> = () => {
       </div>
       <div>
         <Text>Prefix</Text>
-        <div className="space-x-4">
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <Button
             onClick={action("clicked")}
             prefix={<BeakerIcon className="h-6 w-6" />}
@@ -123,7 +123,7 @@ const Template: ComponentStory<typeof Button> = () => {
       </div>
       <div>
         <Text>Suffix</Text>
-        <div className="space-x-4">
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <Button
             onClick={action("clicked")}
             suffix={<BeakerIcon className="h-6 w-6" />}

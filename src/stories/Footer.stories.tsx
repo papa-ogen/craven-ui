@@ -7,10 +7,10 @@ export default {
   component: Footer,
 } as ComponentMeta<typeof Footer>;
 
-const Template: ComponentStory<typeof Footer> = () => (
-  <Footer>
-    <div className="p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
-      <Text>Find me on Social Media</Text>
+const Template: ComponentStory<typeof Footer> = (args) => (
+  <Footer {...args}>
+    <div className="p-4 md:p-8 flex items-center border-b-[1px] border-slate-10 justify-center">
+      <Text size={args.size}>Find me on Social Media</Text>
       <Link
         ariaLabel="Find me on LinkedIn"
         color="text-social-linkedin"
@@ -47,3 +47,11 @@ const Template: ComponentStory<typeof Footer> = () => (
 );
 
 export const Default = Template.bind({});
+Default.args = {
+  size: "base",
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: "sm",
+};
