@@ -37,11 +37,15 @@ const Template: ComponentStory<typeof Form> = () => {
         required
         disabled={dataSent}
       />
-      <div className="space-x-4">
+      <div className="space-x-4 flex">
         <Button onClick={onSubmit} disabled={dataSent}>
           Log in
         </Button>
-        {dataSent && <StatusLabel role="alert">Data has been sent</StatusLabel>}
+        {dataSent && (
+          <div className="grid flex-grow sm:flex-none sm:block">
+            <StatusLabel role="alert">Data has been sent</StatusLabel>
+          </div>
+        )}
       </div>
     </Form>
   );

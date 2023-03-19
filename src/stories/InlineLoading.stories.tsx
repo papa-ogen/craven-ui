@@ -16,8 +16,9 @@ const MockSubmission = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [description, setDescription] = useState("Submitting...");
-  const [ariaLive, setAriaLive] =
-    useState<"off" | "assertive" | "polite" | undefined>("off");
+  const [ariaLive, setAriaLive] = useState<
+    "off" | "assertive" | "polite" | undefined
+  >("off");
   const handleSubmit = () => {
     setIsSubmitting(true);
     setAriaLive("assertive");
@@ -64,7 +65,7 @@ export default {
 const Template: ComponentStory<typeof InlineLoading> = () => (
   <MockSubmission>
     {({ handleSubmit, isSubmitting, success, description, ariaLive }) => (
-      <div className="flex space-x-2">
+      <div className="grid grid-cols-2 sm:flex space-x-2">
         <Button variant="info" disabled={isSubmitting || success}>
           Cancel
         </Button>

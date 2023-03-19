@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Heading, Text, StatusLabel } from "..";
+import { Heading, StatusLabel, Text } from "..";
 
 export default {
   title: "UI/StatusLabel",
@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof StatusLabel> = () => {
       <Heading>Variants</Heading>
       <div>
         <Text>Outline</Text>
-        <section className="space-x-4">
+        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <StatusLabel>Data has been sent.</StatusLabel>
           <StatusLabel type="error">Data failed.</StatusLabel>
           <StatusLabel type="warning">Not all files was uploaded.</StatusLabel>
@@ -28,7 +28,7 @@ const Template: ComponentStory<typeof StatusLabel> = () => {
       </div>
       <div>
         <Text>Filled</Text>
-        <section className="space-x-4">
+        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <StatusLabel variant="filled">Data has been sent.</StatusLabel>
           <StatusLabel variant="filled" type="error">
             Data failed.
@@ -43,7 +43,7 @@ const Template: ComponentStory<typeof StatusLabel> = () => {
       </div>
       <div>
         <Text>Filled-Border</Text>
-        <section className="space-x-4">
+        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
           <StatusLabel variant="filled-border">Data has been sent.</StatusLabel>
           <StatusLabel variant="filled-border" type="error">
             Data failed.

@@ -26,7 +26,9 @@ const Tag = ({
 }) => {
   return (
     <span
-      className={`${getVariantCSS(variant)} px-1.5 pb-0.5 rounded-md text-xs`}
+      className={`${getVariantCSS(
+        variant
+      )} px-1.5 pb-0.5 rounded-md text-xs inline-block`}
     >
       {text}
     </span>
