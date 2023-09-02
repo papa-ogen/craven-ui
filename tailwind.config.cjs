@@ -27,8 +27,7 @@ module.exports = {
     },
   },
   fontFamily: {
-    uniwars: ["uniwars", "sans-serif"],
-    zonapro: ["Zona\\ Pro"],
+    inter: "Inter",
   },
   keyframes: {
     slideUpAndFade: {

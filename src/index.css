@@ -1,5 +1,4 @@
-@import url("https://use.typekit.net/iti5dbm.css");
-@import url("./zona-pro.css");
+@import "../public/assets/fonts/inter.css";
 
 @tailwind base;
 @tailwind components;
@@ -11,4 +10,5 @@ body {
 }
 body {
   background: #25282a;
+  font-family: "Inter", sans-serif;
 }
