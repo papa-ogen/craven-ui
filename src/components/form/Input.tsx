@@ -40,8 +40,8 @@ const Input = ({
         </label>
       )}
       <input
-        className={`block w-full bg-cyan-1 focus:bg-cyan-2 rounded-sm outline-0 focus:ring-0 text-slate-12 placeholder:text-cyan-7 focus:border-blue-10 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:cursor-not-allowed ${
-          hasError ? "border-red-10" : "border-blue-8"
+        className={`block w-full bg-cyan-1 focus:bg-cyan-2 rounded-sm outline-0 focus:ring-0 text-slate-12 placeholder:text-cyan-7 focus:border-cyan-10 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:cursor-not-allowed ${
+          hasError ? "border-red-10" : "border-cyan-8"
         }`}
         id={id}
         type={type}

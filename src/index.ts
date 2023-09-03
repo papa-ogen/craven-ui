@@ -1,6 +1,7 @@
 import ContextProvider from "./components/Context";
 import Footer from "./components/Footer";
 import { Button, ButtonVariantType, Form, Input } from "./components/form";
+import Header from "./components/Header";
 import Heading from "./components/Heading";
 import HoverCard from "./components/HoverCard";
 import InlineLoading from "./components/InlineLoading";
@@ -17,6 +18,7 @@ export {
   ContextProvider,
   Footer,
   Form,
+  Header,
   Heading,
   HoverCard,
   InlineLoading,
