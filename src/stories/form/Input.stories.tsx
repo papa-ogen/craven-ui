@@ -43,25 +43,27 @@ Default.args = {
   ...inputArgs,
 };
 
-export const WithError = Template.bind({});
-WithError.args = {
-  ...inputArgs,
-  error: "Error: Wrong name",
-};
-
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...inputArgs,
   disabled: true,
 };
 
-export const WithValue = Template.bind({});
-WithValue.args = {
-  ...inputArgs,
-  value: "Dave Mustaine",
-};
 export const WithDefaultValue = Template.bind({});
 WithDefaultValue.args = {
   ...inputArgs,
   defaultValue: "Tony Iommi",
+};
+
+export const WithError = Template.bind({});
+WithError.args = {
+  ...inputArgs,
+  errorText: "Error: Wrong name",
+  hasError: true,
+};
+
+export const WithValue = Template.bind({});
+WithValue.args = {
+  ...inputArgs,
+  value: "Dave Mustaine",
 };

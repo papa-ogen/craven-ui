@@ -1,5 +1,6 @@
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -7,11 +8,18 @@ module.exports = {
     "storybook-addon-react-router-v6",
     "storybook-dark-mode",
   ],
+
   framework: "@storybook/react",
+
   core: {
     builder: "@storybook/builder-vite",
   },
+
   features: {
     storyStoreV7: false,
   },
+
+  docs: {
+    autodocs: true
+  }
 };

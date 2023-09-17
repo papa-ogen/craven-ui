@@ -5,7 +5,8 @@ interface InputProps {
   label?: string;
   placeholder?: string;
   type?: "text" | "password" | "number";
-  error?: string;
+  errorText?: string;
+  hasError?: boolean;
   required?: boolean;
   disabled?: boolean;
   defaultValue?: string | number;
@@ -18,7 +19,8 @@ const Input = ({
   label,
   placeholder,
   type = "text",
-  error,
+  errorText,
+  hasError,
   required,
   disabled,
   defaultValue,
@@ -38,7 +40,9 @@ const Input = ({
         </label>
       )}
       <input
-        className="block w-full bg-cyan-1 rounded-sm outline-0 focus:ring-0 border-orange-8 text-slate-12 placeholder:text-cyan-7 focus:border-primary-orange disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8"
+        className={`block w-full bg-cyan-1 focus:bg-cyan-2 rounded-sm outline-0 focus:ring-0 text-slate-12 placeholder:text-cyan-7 focus:border-cyan-10 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:cursor-not-allowed ${
+          hasError ? "border-red-10" : "border-cyan-8"
+        }`}
         id={id}
         type={type}
         placeholder={placeholder}
@@ -48,7 +52,9 @@ const Input = ({
         onChange={onChange}
         onBlur={onBlur}
       />
-      {error && <p className="text-red-10 text-xs italic mt-1">{error}</p>}
+      {hasError && (
+        <p className="text-red-10 text-xs italic mt-1">{errorText}</p>
+      )}
     </div>
   );
 };
