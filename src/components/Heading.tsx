@@ -1,3 +1,5 @@
+import React from "react";
+
 type HeadingType =
   | "screenTitle"
   | "sectionTitle"
@@ -26,7 +28,7 @@ const Heading = ({
   type = "screenTitle",
   as = "h1",
 }: {
-  children: string;
+  children: React.ReactNode;
   type?: HeadingType;
   as?: TagType;
 }) => {

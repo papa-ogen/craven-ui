@@ -7,6 +7,7 @@ import HoverCard from "./components/HoverCard";
 import InlineLoading from "./components/InlineLoading";
 import Link from "./components/Link";
 import Page from "./components/Page";
+import Progress from "./components/Progress";
 import Spinner from "./components/Spinner";
 import StatusLabel from "./components/StatusLabel";
 import Tag from "./components/Tag";
@@ -25,6 +26,7 @@ export {
   Input,
   Link,
   Page,
+  Progress,
   Spinner,
   StatusLabel,
   Tag,
