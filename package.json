@@ -17,7 +17,6 @@
     }
   },
   "scripts": {
-    "dev": "npm run storybook",
     "build": "tsc && vite build && cp src/assets/fonts /dist",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
@@ -61,6 +60,7 @@
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-sort-exports": "^0.8.0",
+    "eslint-plugin-storybook": "^0.6.13",
     "gh-pages": "^5.0.0",
     "jest-image-snapshot": "^6.1.0",
     "postcss": "^8.4.21",
