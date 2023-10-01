@@ -1,9 +1,9 @@
-import React from "react";
+import { tw } from "react-tailwind-variants";
 
-const Spinner = () => {
+const Spinner = ({ className }: { className?: string }) => {
   return (
     <svg
-      className="animate-spin h-3 w-3 text-white"
+      className={tw`animate-spin h-3 w-3 text-white ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

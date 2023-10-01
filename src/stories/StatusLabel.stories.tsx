@@ -1,3 +1,9 @@
+import {
+  CodeBracketSquareIcon,
+  ExclamationCircleIcon,
+  InformationCircleIcon,
+  ShieldExclamationIcon,
+} from "@heroicons/react/24/outline";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Heading, StatusLabel, Text } from "..";
 
@@ -19,40 +25,63 @@ const Template: ComponentStory<typeof StatusLabel> = () => {
       <Heading>Variants</Heading>
       <div>
         <Text>Outline</Text>
-        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
-          <StatusLabel>Data has been sent.</StatusLabel>
-          <StatusLabel type="error">Data failed.</StatusLabel>
-          <StatusLabel type="warning">Not all files was uploaded.</StatusLabel>
-          <StatusLabel type="info">Pro tip: yolo.</StatusLabel>
+        <section className="flex space-x-4 w-full">
+          <StatusLabel
+            type="success-outline"
+            className="flex space-x-2 items-center flex-1"
+          >
+            Data has been sent.
+          </StatusLabel>
+          <StatusLabel
+            type="error-outline"
+            className="flex space-x-2 items-center flex-1"
+          >
+            Data failed.
+          </StatusLabel>
+          <StatusLabel
+            type="warning-outline"
+            className="flex space-x-2 items-center flex-1"
+          >
+            Not all files were uploaded.
+          </StatusLabel>
+          <StatusLabel
+            type="info-outline"
+            className="flex space-x-2 items-center flex-1"
+          >
+            Pro tip: yolo.
+          </StatusLabel>
         </section>
       </div>
       <div>
         <Text>Filled</Text>
-        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
-          <StatusLabel variant="filled">Data has been sent.</StatusLabel>
-          <StatusLabel variant="filled" type="error">
-            Data failed.
+        <section className="flex space-x-4 w-full">
+          <StatusLabel
+            type="success-filled"
+            className="flex space-x-2 items-center flex-1"
+          >
+            <CodeBracketSquareIcon width={20} />
+            <span className="text-xs">Data has been sent.</span>
           </StatusLabel>
-          <StatusLabel variant="filled" type="warning">
-            Not all files was uploaded.
+          <StatusLabel
+            type="error-filled"
+            className="flex space-x-2 items-center flex-1"
+          >
+            <ExclamationCircleIcon width={20} />
+            <span className="text-xs">Data failed.</span>
           </StatusLabel>
-          <StatusLabel variant="filled" type="info">
-            Pro tip: yolo.
+          <StatusLabel
+            type="warning-filled"
+            className="flex space-x-2 items-center flex-1"
+          >
+            <ShieldExclamationIcon width={20} />
+            <span className="text-xs">Not all files were uploaded.</span>
           </StatusLabel>
-        </section>
-      </div>
-      <div>
-        <Text>Filled-Border</Text>
-        <section className="flex md:block flex-col items-start md:space-x-4 space-y-4">
-          <StatusLabel variant="filled-border">Data has been sent.</StatusLabel>
-          <StatusLabel variant="filled-border" type="error">
-            Data failed.
-          </StatusLabel>
-          <StatusLabel variant="filled-border" type="warning">
-            Not all files was uploaded.
-          </StatusLabel>
-          <StatusLabel variant="filled-border" type="info">
-            Pro tip: yolo.
+          <StatusLabel
+            type="info-filled"
+            className="flex space-x-2 items-center flex-1"
+          >
+            <InformationCircleIcon width={20} />
+            <span className="text-xs">Pro tip: yolo.</span>
           </StatusLabel>
         </section>
       </div>

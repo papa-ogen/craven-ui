@@ -66,7 +66,7 @@ const Template: ComponentStory<typeof InlineLoading> = () => (
   <MockSubmission>
     {({ handleSubmit, isSubmitting, success, description, ariaLive }) => (
       <div className="grid grid-cols-2 sm:flex space-x-2">
-        <Button variant="info" disabled={isSubmitting || success}>
+        <Button color="accent" size="small" disabled={isSubmitting || success}>
           Cancel
         </Button>
         {isSubmitting || success ? (
@@ -76,7 +76,9 @@ const Template: ComponentStory<typeof InlineLoading> = () => (
             status={success ? "finished" : "active"}
           />
         ) : (
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button color="brand" size="small" onClick={handleSubmit}>
+            Submit
+          </Button>
         )}
       </div>
     )}
