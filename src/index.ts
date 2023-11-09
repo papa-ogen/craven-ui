@@ -1,6 +1,6 @@
 import ContextProvider from "./components/Context";
 import Footer from "./components/Footer";
-import { Button, ButtonVariantType, Form, Input } from "./components/form";
+import { Button, Form, Input } from "./components/form";
 import Header from "./components/Header";
 import Heading from "./components/Heading";
 import HoverCard from "./components/HoverCard";
@@ -33,4 +33,4 @@ export {
   Text,
   Toast,
 };
-export type { ButtonVariantType, ToastVariantType };
+export type { ToastVariantType };

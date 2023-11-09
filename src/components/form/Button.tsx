@@ -27,5 +27,3 @@ export const Button = styled("button", {
     size: "small",
   },
 });
-
-export default Button;
