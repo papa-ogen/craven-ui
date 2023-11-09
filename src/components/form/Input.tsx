@@ -5,6 +5,7 @@ interface InputProps {
   label?: string;
   placeholder?: string;
   type?: "text" | "password" | "number";
+  name?: string;
   errorText?: string;
   hasError?: boolean;
   required?: boolean;
@@ -19,6 +20,7 @@ const Input = ({
   label,
   placeholder,
   type = "text",
+  name,
   errorText,
   hasError,
   required,
@@ -46,6 +48,7 @@ const Input = ({
         id={id}
         type={type}
         placeholder={placeholder}
+        name={name}
         disabled={disabled}
         defaultValue={defaultValue}
         value={value}

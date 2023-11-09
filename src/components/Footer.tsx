@@ -10,7 +10,7 @@ const Footer = ({
   size?: "base" | "sm";
 }) => {
   return (
-    <footer className="bg-gradient-to-b from-mauve-2 w-full flex flex-col border-t-[1px] border-primary-orange">
+    <footer className="bg-gradient-to-b from-mauve-2 w-full flex flex-col border-t-[1px] border-orange-500">
       {children}
       <div className="flex-grow flex justify-center pt-2">
         <CStudio

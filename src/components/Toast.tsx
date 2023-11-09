@@ -11,7 +11,7 @@ const getVariantColor = (variant: ToastVariantType) => {
     case "error":
       return "red";
     case "success":
-      return "grass";
+      return "green";
     case "warning":
       return "yellow";
     case "info":
@@ -35,13 +35,14 @@ const Toast = ({
   const color = getVariantColor(variant);
   return (
     <div
-      className={`border-l-2 border-${color}-10 p-4 bg-primary-dark-gray hover:bg-slate-6 transition ease-in-out delay-100`}
+      className={`border-l-2 border-${color}-10 p-4 bg-dark-900 hover:bg-slate-6 transition ease-in-out delay-100`}
     >
       <div className="flex items-center space-x-2">
         <ExclamationCircleIcon className={`h-4 w-4 text-${color}-10`} />
         <h5 className="font-bold grow">{title}</h5>
         <div className="justify-end">
           <button
+            type="button"
             className={`hover:text-${color}-10`}
             onClick={onClick && onClick}
             aria-label="Close Button"

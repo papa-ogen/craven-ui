@@ -1,56 +1,31 @@
-export type ButtonVariantType = "error" | "success" | "warning" | "info";
+import { styled } from "react-tailwind-variants";
 
-interface ButtonProps {
-  children: React.ReactNode;
-  variant?: ButtonVariantType;
-  suffix?: React.ReactNode;
-  prefix?: React.ReactNode;
-  name?: string | undefined;
-  type?: "submit" | "reset" | "button" | undefined;
-  disabled?: boolean;
-  onClick?: () => void;
-}
-
-const getVariantClasses = (variant: ButtonVariantType) => {
-  switch (variant) {
-    case "error":
-      return "border-red-10 text-red-10 bg-red-2";
-    case "warning":
-      return "border-yellow-10 text-yellow-10 bg-yellow-2";
-    case "info":
-      return "border-blue-10 text-blue-10 bg-blue-2";
-    case "success":
-    default:
-      return "border-grass-10 text-grass-10 bg-grass-2";
-  }
-};
-
-const Button = ({
-  children,
-  variant = "success",
-  type = "button",
-  disabled,
-  prefix,
-  suffix,
-  onClick,
-}: ButtonProps) => {
-  return (
-    <button
-      type={type}
-      className={`border rounded-sm px-2 opacity-75 hover:opacity-100 py-1 disabled:bg-gray-4 disabled:border-gray-9 disabled:placeholder:text-gray-8 disabled:hover:opacity-80 ${
-        !disabled && getVariantClasses(variant)
-      } transition ease-in-out delay-100`}
-      disabled={disabled}
-      onClick={onClick}
-      aria-label="Button"
-    >
-      <div className="flex space-x-2">
-        {prefix && <span>{prefix}</span>}
-        {prefix || suffix ? <span>{children}</span> : children}
-        {suffix && <span>{suffix}</span>}
-      </div>
-    </button>
-  );
-};
+export const Button = styled("button", {
+  base: "rounded text-white disabled:cursor-not-allowed",
+  variants: {
+    color: {
+      brand:
+        "bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700 disabled:bg-orange-200 disabled:text-orange-300",
+      outlined:
+        "text-orange-500 border-orange-500 border-[1px] hover:opacity-70 active:text-orange-100 active:border-orange-200 disabled:text-orange-900 disabled:border-orange-900 disabled:hover:bg-transparent",
+      gradient:
+        "bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 active:from-orange-600 active:to-orange-800 disabled:from-orange-200 disabled:to-orange-100 disabled:text-orange-300",
+      accent:
+        "bg-blue-600 text-white hover:bg-blue-600 active:bg-blue-700 disabled:bg-blue-50 disabled:text-blue-300",
+      "accent-outlined":
+        "text-blue-500 border-blue-500 border-[1px] hover:opacity-70 active:text-blue-100 active:border-blue-200 disabled:text-blue-900 disabled:border-blue-900 disabled:hover:bg-transparent",
+      "accent-gradient":
+        "bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 active:from-blue-600 active:to-blue-800 disabled:from-blue-100 disabled:to-blue-50 disabled:text-blue-400",
+    },
+    size: {
+      small: "px-5 py-3 text-xs",
+      large: "px-6 py-4 text-base",
+    },
+  },
+  defaultVariants: {
+    color: "gradient",
+    size: "small",
+  },
+});
 
 export default Button;

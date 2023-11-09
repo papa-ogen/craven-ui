@@ -1,43 +1,122 @@
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import {
+  gray,
+  blue,
+  red,
+  green,
+  grayDark,
+  blueDark,
+  redDark,
+  greenDark,
+} from "@radix-ui/colors";
 
 <Meta title="Colors" />
 
 <ColorPalette>
   <ColorItem
-    title="theme.color.greyscale"
-    subtitle="Some of the greys"
-    colors={{
-      white: "#FFFFFF",
-      "light-gray": "#BBBCBC",
-      gray: "#363636",
-      "dark-gray": "#25282A",
-      black: "#000000",
-    }}
-  />
-  <ColorItem
-    title="theme.color.primary"
+    title="Primary"
     subtitle="Orange"
     colors={{ Orange: "#FE5000", DarkGray: "#25282A" }}
   />
-  <ColorItem
-    title="theme.color.cta"
-    subtitle="Call to Action"
-    colors={{
-      red: "#DC3D43",
-      yellow: "#F7CE00",
-      green: "#3D9A50",
-      blue: "#0081F1",
-    }}
-  />
-  <ColorItem
-    title="theme.color.social"
-    subtitle="Social Media Colors"
-    colors={{
-      facebook: "#3b5998",
-      twitter: "#0084b4",
-      google: "#db4a39",
-      github: "#4078c0",
-      linkedin: "#0072b1",
-    }}
-  />
+    <ColorItem title="Orange" colors={  {
+        50: "#fff6ec",
+        100: "#ffecd3",
+        200: "#ffd5a5",
+        300: "#ffb66d",
+        400: "#ff8b32",
+        500: "#ff6a0a",
+        600: "#fe5000",
+        700: "#cc3702",
+        800: "#a12c0b",
+        900: "#82270c",
+        950: "#461004",
+      }} />
+    <ColorItem title="Dark" colors={  {
+        50: "#f5f6f6",
+        100: "#e5e8e8",
+        200: "#cdd2d4",
+        300: "#aab3b6",
+        400: "#808c90",
+        500: "#657175",
+        600: "#565f64",
+        700: "#4a5154",
+        800: "#414649",
+        900: "#393d40",
+        950: "#25282a",
+      }} />
+    <ColorItem title="Blue" colors={  {
+        50: "#edfbff",
+        100: "#d6f4ff",
+        200: "#b5eeff",
+        300: "#83e6ff",
+        400: "#48d5ff",
+        500: "#1eb8ff",
+        600: "#069cff",
+        700: "#0081f1",
+        800: "#0868c5",
+        900: "#0d599b",
+        950: "#0e365d",
+      }} />
+    <ColorItem title="Green" colors={  {
+        50: "#f3faf4",
+        100: "#e2f6e6",
+        200: "#c7ebcd",
+        300: "#9adba7",
+        400: "#67c179",
+        500: "#3d9a50",
+        600: "#318843",
+        700: "#2a6b37",
+        800: "#255630",
+        900: "#20472a",
+        950: "#0d2613",
+      }} />
+    <ColorItem title="Yellow" colors={  {
+        50: "#ffffe7",
+        100: "#feffc1",
+        200: "#fffc86",
+        300: "#fff341",
+        400: "#ffe40d",
+        500: "#f7ce00",
+        600: "#d19c00",
+        700: "#a67002",
+        800: "#89570a",
+        900: "#74470f",
+        950: "#442504",
+      }} />
+    <ColorItem title="Red" colors={  {
+        50: "#fef2f2",
+        100: "#fde3e4",
+        200: "#fdcbcd",
+        300: "#faa7aa",
+        400: "#f57479",
+        500: "#ec474d",
+        600: "#dc3d43",
+        700: "#b61f25",
+        800: "#971d22",
+        900: "#7d1f23",
+        950: "#440b0d",
+      }} />
+
+<ColorItem
+  title="Social"
+  subtitle="Social Media Colors"
+  colors={{
+    facebook: "#3b5998",
+    twitter: "#0084b4",
+    google: "#db4a39",
+    github: "#4078c0",
+    linkedin: "#0072b1",
+  }}
+/>
+
+# Radix Colors
+
+  <ColorItem title="gray" colors={ gray } />
+  <ColorItem title="blue" colors={ blue } />
+  <ColorItem title="red" colors={ red } />
+  <ColorItem title="green" colors={ green } />
+  <ColorItem title="grayDark" colors={ grayDark } />
+  <ColorItem title="blueDark" colors={ blueDark } />
+  <ColorItem title="redDark" colors={ redDark } />
+  <ColorItem title="greenDark" colors={ greenDark } />
 </ColorPalette>

@@ -1,6 +1,5 @@
 import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 import { CheckIcon } from "@heroicons/react/24/solid";
-import React from "react";
 import Spinner from "./Spinner";
 
 const InlineLoading = ({

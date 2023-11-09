@@ -1,3 +1,4 @@
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { expect } from "@storybook/jest";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { userEvent, within } from "@storybook/testing-library";
@@ -37,13 +38,25 @@ const Template: ComponentStory<typeof Form> = () => {
         required
         disabled={dataSent}
       />
-      <div className="space-x-4 flex">
-        <Button onClick={onSubmit} disabled={dataSent}>
+      <div className="space-x-4 flex ">
+        <Button
+          color="gradient"
+          size="small"
+          onClick={onSubmit}
+          disabled={dataSent}
+          type="button"
+        >
           Log in
         </Button>
         {dataSent && (
-          <div className="grid flex-grow sm:flex-none sm:block">
-            <StatusLabel role="alert">Data has been sent</StatusLabel>
+          <div className="grid flex-grow">
+            <StatusLabel
+              type="info-filled"
+              className="flex space-x-2 items-center flex-1"
+            >
+              <InformationCircleIcon width={20} />
+              <span className="text-xs">Data sent</span>
+            </StatusLabel>
           </div>
         )}
       </div>

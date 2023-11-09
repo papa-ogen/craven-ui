@@ -3,19 +3,89 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
-    extend: {
-      backgroundImage: {
-        logo: "url('/assets/Cstudio_logo_BW_positive_CMYK_web-01.svg')",
-      },
-    },
     colors: {
+      DIDDE: "red",
       white: "#FFFFFF",
       black: "#000000",
       transparent: "transparent",
       current: "currentColor",
-      primary: {
-        orange: "#FE5000",
-        "dark-gray": "#25282A",
+      orange: {
+        50: "#fff6ec",
+        100: "#ffecd3",
+        200: "#ffd5a5",
+        300: "#ffb66d",
+        400: "#ff8b32",
+        500: "#ff6a0a",
+        600: "#fe5000",
+        700: "#cc3702",
+        800: "#a12c0b",
+        900: "#82270c",
+        950: "#461004",
+      },
+      dark: {
+        50: "#f5f6f6",
+        100: "#e5e8e8",
+        200: "#cdd2d4",
+        300: "#aab3b6",
+        400: "#808c90",
+        500: "#657175",
+        600: "#565f64",
+        700: "#4a5154",
+        800: "#414649",
+        900: "#393d40",
+        950: "#25282a",
+      },
+      blue: {
+        50: "#edfbff",
+        100: "#d6f4ff",
+        200: "#b5eeff",
+        300: "#83e6ff",
+        400: "#48d5ff",
+        500: "#1eb8ff",
+        600: "#069cff",
+        700: "#0081f1",
+        800: "#0868c5",
+        900: "#0d599b",
+        950: "#0e365d",
+      },
+      green: {
+        50: "#f3faf4",
+        100: "#e2f6e6",
+        200: "#c7ebcd",
+        300: "#9adba7",
+        400: "#67c179",
+        500: "#3d9a50",
+        600: "#318843",
+        700: "#2a6b37",
+        800: "#255630",
+        900: "#20472a",
+        950: "#0d2613",
+      },
+      yellow: {
+        50: "#ffffe7",
+        100: "#feffc1",
+        200: "#fffc86",
+        300: "#fff341",
+        400: "#ffe40d",
+        500: "#f7ce00",
+        600: "#d19c00",
+        700: "#a67002",
+        800: "#89570a",
+        900: "#74470f",
+        950: "#442504",
+      },
+      red: {
+        50: "#fef2f2",
+        100: "#fde3e4",
+        200: "#fdcbcd",
+        300: "#faa7aa",
+        400: "#f57479",
+        500: "#ec474d",
+        600: "#dc3d43",
+        700: "#b61f25",
+        800: "#971d22",
+        900: "#7d1f23",
+        950: "#440b0d",
       },
       social: {
         facebook: "#3b5998",
@@ -25,33 +95,43 @@ module.exports = {
         linkedin: "#0072b1",
       },
     },
-  },
-  fontFamily: {
-    inter: "Inter",
-  },
-  keyframes: {
-    slideUpAndFade: {
-      "0%": { opacity: 0, transform: "translateY(2px)" },
-      "100%": { opacity: 1, transform: "translateY(0)" },
+    fontFamily: {
+      inter: "Inter",
     },
-    slideRightAndFade: {
-      "0%": { opacity: 0, transform: "translateX(-2px)" },
-      "100%": { opacity: 1, transform: "translateX(0)" },
-    },
-    slideDownAndFade: {
-      "0%": { opacity: 0, transform: "translateY(-2px)" },
-      "100%": { opacity: 1, transform: "translateY(0)" },
-    },
-    slideLeftAndFade: {
-      "0%": { opacity: 0, transform: "translateX(2px)" },
-      "100%": { opacity: 1, transform: "translateX(0)" },
+
+    extend: {
+      backgroundImage: {
+        logo: "url('/assets/Cstudio_logo_BW_positive_CMYK_web-01.svg')",
+      },
+      keyframes: {
+        slideUpAndFade: {
+          "0%": { opacity: 0, transform: "translateY(2px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        slideRightAndFade: {
+          "0%": { opacity: 0, transform: "translateX(-2px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+        slideDownAndFade: {
+          "0%": { opacity: 0, transform: "translateY(-2px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        slideLeftAndFade: {
+          "0%": { opacity: 0, transform: "translateX(2px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        slideUpAndFade: "slideUpAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
+        slideDownAndFade:
+          "slideDownAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
+        slideRightAndFade:
+          "slideRightAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
+        slideLeftAndFade:
+          "slideLeftAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
+      },
     },
   },
-  animation: {
-    slideUpAndFade: "slideUpAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
-    slideDownAndFade: "slideDownAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
-    slideRightAndFade: "slideRightAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
-    slideLeftAndFade: "slideLeftAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)",
-  },
+
   plugins: [require("@tailwindcss/forms"), require("windy-radix-palette")],
 };
