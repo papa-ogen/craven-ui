@@ -35,6 +35,7 @@ const inputArgs = {
   id: "firstName",
   label: "First Name",
   placeholder: "Write your first name here",
+  name: "firstName",
 };
 
 export const Default = Template.bind({});

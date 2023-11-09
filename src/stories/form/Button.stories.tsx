@@ -2,6 +2,7 @@ import { BeakerIcon } from "@heroicons/react/24/solid";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import { CalculatorIcon } from "@heroicons/react/24/outline";
 import { Button, Heading } from "../..";
 export default {
   title: "UI/Form/Button",
@@ -34,18 +35,18 @@ const Template: ComponentStory<typeof Button> = () => {
             onClick={action("clicked")}
             disabled
           >
-            Failure
+            Disabled
           </Button>
         </div>
         <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
-          <Button color="accent" size="large" onClick={action("clicked")}>
+          <Button color="outlined" size="large" onClick={action("clicked")}>
             Success
           </Button>
-          <Button color="accent" size="small" onClick={action("clicked")}>
+          <Button color="outlined" size="small" onClick={action("clicked")}>
             Failure
           </Button>
           <Button
-            color="accent"
+            color="outlined"
             size="small"
             onClick={action("clicked")}
             disabled
@@ -60,7 +61,9 @@ const Template: ComponentStory<typeof Button> = () => {
             </div>
           </Button>
           <Button color="gradient" size="small" onClick={action("clicked")}>
-            Failure
+            <div className="flex space-x-2">
+              <BeakerIcon className="h-4 w-4" /> <span>Failure</span>
+            </div>
           </Button>
           <Button
             color="gradient"
@@ -68,7 +71,89 @@ const Template: ComponentStory<typeof Button> = () => {
             onClick={action("clicked")}
             disabled
           >
-            Failure
+            Disabled
+          </Button>
+        </div>
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
+          <Button color="accent" size="large" onClick={action("clicked")}>
+            <div className="flex space-x-2">
+              <CalculatorIcon className="h-6 w-6" /> <span>Success</span>
+            </div>
+          </Button>
+          <Button color="accent" size="small" onClick={action("clicked")}>
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Failure</span>
+            </div>
+          </Button>
+          <Button
+            color="accent"
+            size="small"
+            onClick={action("clicked")}
+            disabled
+          >
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Disabled</span>
+            </div>
+          </Button>
+        </div>
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
+          <Button
+            color="accent-outlined"
+            size="large"
+            onClick={action("clicked")}
+          >
+            <div className="flex space-x-2">
+              <CalculatorIcon className="h-6 w-6" /> <span>Success</span>
+            </div>
+          </Button>
+          <Button
+            color="accent-outlined"
+            size="small"
+            onClick={action("clicked")}
+          >
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Failure</span>
+            </div>
+          </Button>
+          <Button
+            color="accent-outlined"
+            size="small"
+            onClick={action("clicked")}
+            disabled
+          >
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Disabled</span>
+            </div>
+          </Button>
+        </div>
+        <div className="flex md:block flex-col items-start md:space-x-4 space-y-4">
+          <Button
+            color="accent-gradient"
+            size="large"
+            onClick={action("clicked")}
+          >
+            <div className="flex space-x-2">
+              <CalculatorIcon className="h-6 w-6" /> <span>Success</span>
+            </div>
+          </Button>
+          <Button
+            color="accent-gradient"
+            size="small"
+            onClick={action("clicked")}
+          >
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Failure</span>
+            </div>
+          </Button>
+          <Button
+            color="accent-gradient"
+            size="small"
+            onClick={action("clicked")}
+            disabled
+          >
+            <div className="flex space-x-2 items-center">
+              <CalculatorIcon className="h-4 w-4" /> <span>Disabled</span>
+            </div>
           </Button>
         </div>
       </div>

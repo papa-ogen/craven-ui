@@ -1,9 +1,9 @@
-import { tw } from "react-tailwind-variants";
+import { twMerge } from "tailwind-merge";
 
 const Spinner = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={tw`animate-spin h-3 w-3 text-white ${className}`}
+      className={twMerge("animate-spin h-3 w-3 text-white", className)}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
