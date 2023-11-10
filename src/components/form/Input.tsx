@@ -14,6 +14,7 @@ interface InputProps {
   value?: string | number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const {
@@ -30,6 +31,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     value,
     onChange,
     onBlur,
+    onFocus,
   } = props;
   return (
     <div className="mb-4">
@@ -55,6 +57,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        onFocus={onFocus}
         ref={ref}
       />
       {hasError && (
