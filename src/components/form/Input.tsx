@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 interface InputProps {
   id: string;
@@ -15,21 +15,22 @@ interface InputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
-const Input = ({
-  id,
-  label,
-  placeholder,
-  type = "text",
-  name,
-  errorText,
-  hasError,
-  required,
-  disabled,
-  defaultValue,
-  value,
-  onChange,
-  onBlur,
-}: InputProps) => {
+const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const {
+    id,
+    label,
+    placeholder,
+    type = "text",
+    name,
+    errorText,
+    hasError,
+    required,
+    disabled,
+    defaultValue,
+    value,
+    onChange,
+    onBlur,
+  } = props;
   return (
     <div className="mb-4">
       {label && (
@@ -54,12 +55,15 @@ const Input = ({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        ref={ref}
       />
       {hasError && (
         <p className="text-red-10 text-xs italic mt-1">{errorText}</p>
       )}
     </div>
   );
-};
+});
+
+Input.displayName = "Input";
 
 export default Input;

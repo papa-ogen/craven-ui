@@ -6,15 +6,17 @@ const Page = ({
   children,
   noPadding,
 }: {
-  title: string;
+  title?: string;
   children: React.ReactNode;
   noPadding?: boolean;
 }) => {
   return (
     <div className={`py-4 ${noPadding ? "" : "px-4 "}max-w-4xl mb-auto`}>
-      <Heading type="sectionTitle" as="h2">
-        {title}
-      </Heading>
+      {title && (
+        <Heading type="sectionTitle" as="h2">
+          {title}
+        </Heading>
+      )}
       {children}
     </div>
   );
